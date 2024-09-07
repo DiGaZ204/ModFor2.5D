@@ -115,7 +115,8 @@ def main():
             'e.png': "刃牙子(T0.5)",
             'f.png': "鈴木",
             'g.png': "限定真由梨(T0)",
-            'h.png': "繪理(T1)        #奶媽"
+            'h.png': "繪理(T1)        #奶媽",
+            "i.png": "牧野(T0.5)"
         }
         found_characters = []
         for image, name in characters.items():
