@@ -52,7 +52,7 @@ def open_program(program_path):
     except Exception as e:
         print(f"無法開啟程式: {e}")
 
-def find_and_click_icon(icon_path, confidence=0.8, max_attempts=10, delay=0.5):
+def find_and_click_icon(icon_path, confidence=0.8, max_attempts=40, delay=0.5):
     """
     找到螢幕上的圖示並點擊，如果失敗則重試
     """
@@ -125,7 +125,7 @@ def move_window_to_top_left(window_title):
     except ImportError:
         print("無法導入 win32gui 和 win32con 模組，請確保已安裝 pywin32")
 
-def click_images_in_sequence(image_paths, max_attempts=10, delay=0.5):
+def click_images_in_sequence(image_paths, max_attempts=40, delay=0.5):
     """
     依序點擊多張圖片
     """
@@ -146,7 +146,7 @@ def click_images_in_sequence(image_paths, max_attempts=10, delay=0.5):
         time.sleep(delay)
     return True
 
-def click_until_next_image(click_coords, next_image_path, max_attempts=100, delay=0.1):
+def click_until_next_image(click_coords, next_image_path, max_attempts=40, delay=0.5):
     """
     持續點擊指定坐標，直到能夠檢測到下一張圖片
     """
@@ -319,7 +319,8 @@ def main():
             'c.png': "真由梨",
             'd.png': "雅",
             'e.png': "刃牙子",
-            'f.png': "鈴木"
+            'f.png': "鈴木",
+            'g.png': "限定真由梨"
         }
         found_characters = []
         for image, name in characters.items():

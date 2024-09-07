@@ -113,7 +113,8 @@ def main():
             'c.png': "真由梨",
             'd.png': "雅",
             'e.png': "刃牙子",
-            'f.png': "鈴木"
+            'f.png': "鈴木",
+            'g.png': "限定真由梨"
         }
         found_characters = []
         for image, name in characters.items():
@@ -128,7 +129,7 @@ def main():
                     f.write(f"{name}\n")
             else:
                 f.write("好可悲，一隻都沒有\n")
-            if num < 3:
+            if num < 2:
                 if click_images_in_sequence(dele_path):
                     time.sleep(11)
                     find_and_click_icon("./photo2.5/dele_4.png")
