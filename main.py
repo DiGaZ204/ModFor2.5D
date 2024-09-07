@@ -108,13 +108,14 @@ def main():
                                                     if find_and_click_icon("./photo2.5/role.png"):
                                                         time.sleep(2)
         characters = {
-            'a.png': "天乃里里沙(PICKUP)",
-            'b.png': "橘美",
-            'c.png': "真由梨",
+            'a.png': "天乃里里沙(T0)    #女主",
+            'b.png': "橘美(T0)          #模特",
+            'c.png': "真由梨(T0.5)",
             'd.png': "雅",
-            'e.png': "刃牙子",
+            'e.png': "刃牙子(T0.5)",
             'f.png': "鈴木",
-            'g.png': "限定真由梨"
+            'g.png': "限定真由梨(T0)",
+            'h.png': "繪理(T1)        #奶媽"
         }
         found_characters = []
         for image, name in characters.items():
