@@ -91,8 +91,8 @@ def find_icon(icon_path, confidence=0.8, window_title="AngelsonStage"):
         return False
 
 # 使用示例
-icon_path = './photo2.5/1.png'
-window_title = "AngelsonStage"
+icon_path = './lol_test.png'
+window_title = "League of Legends"
 
 if os.path.exists(icon_path):
     print(f"圖標文件存在：{icon_path}")
@@ -105,12 +105,12 @@ else:
     print("未找到圖標")
 import win32gui
 
-def enum_windows():
-    def callback(hwnd, windows):
-        if win32gui.IsWindowVisible(hwnd):
-            windows.append(win32gui.GetWindowText(hwnd))
-    windows = []
-    win32gui.EnumWindows(callback, windows)
-    return windows
+# def enum_windows():
+#     def callback(hwnd, windows):
+#         if win32gui.IsWindowVisible(hwnd):
+#             windows.append(win32gui.GetWindowText(hwnd))
+#     windows = []
+#     win32gui.EnumWindows(callback, windows)
+#     return windows
 
-print(enum_windows())
+# print(enum_windows())
